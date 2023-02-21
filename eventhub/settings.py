@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
-"""
+'"""
 
 from pathlib import Path
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'hub.apps.HubConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
