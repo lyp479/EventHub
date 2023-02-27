@@ -17,6 +17,7 @@ def index(request):
 
 # This is the view which handles urls for the event pages themselves
 def event_detail(request, primary_key):
+	# get_object_or_404 shortcut will display a 404 page if the object DNE
 	event = get_object_or_404(PlannedEvent, pk=primary_key)
 	context = {
 		'event' : event
