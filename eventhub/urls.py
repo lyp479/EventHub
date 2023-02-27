@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
 	path('', include('hub.urls')),
+	path('event/', include('hub.urls')),
     path('admin/', admin.site.urls),
 ]
