@@ -1,10 +1,8 @@
 from django.http import HttpResponse
-from django.template import loader
-# from django.shortcuts import render
+from django.shortcuts import render
 
-
+# note: request object is an HttpRequestObject, it has information about
+#  request, such as the method, which can take several values including GET and POST
 def index(request):
-		template = loader.get_template('hub/index.html')
-		return HttpResponse(template.render())
-		 # can also use the render shortcut which returns an http response
-		 #return render(request, 'hub/index.html')
+	# render() looks for HTML templates inside templates directory inside app directory
+	return render(request, 'hub/index.html', {})
